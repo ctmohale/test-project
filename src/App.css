@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for the entire document */
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Body styles */
+body {
+  background: linear-gradient(to right, #0a202b, #0a202b);
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  transition: 1s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Navigation styles */
+.navigation {
+  padding: 20px;
+  border-bottom: 1px solid #eeeded16;
+  transition: 1s;
+
+  /* Mobile view styles */
+  .mobile-view {
+    display: none;
+  }
+
+  /* Button styles */
+  .btn {
+    border-radius: 10px;
+    margin-left: 20px !important;
+  }
+
+  /* Login and Sign Up button styles */
+  .login,
+  .sign-up {
+    width: 94px;
+    height: 48px;
+  }
+
+  /* Navigation link colors */
+  .nav-links {
+    color: #ffffff;
+    color: #b4cad5;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Hero section styles */
+.hero-section {
+  transition: 1s;
+  width: 100%;
+  height: 615px;
+  background: 115% 120px url("../public/assets/Hero\ Image.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .input_search {
+    background: linear-gradient(to right, #324853, #0a202b);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Contributor section styles */
+.contributor_section {
+  background: url("../public/assets/BG Pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 681px;
+  transition: 1s;
+
+  .info-card,
+  .text-5xl {
+    text-align: left !important;
+  }
+
+  /* Subsection styles */
+  .contributor_section_sub {
+    height: inherit;
+    background: linear-gradient(to right, #081921ec 8%, #081921f3);
+
+    transition: 1s;
+  }
+
+  /* Card styles */
+  .card {
+    background: linear-gradient(to right, #ffffff17 100%, #eeeded07 50%);
+  }
+}
+
+/* Explore section styles */
+.explore-section {
+  background: url("../public/assets/Eplore Unique Edits Section.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+
+  /* Sub-explore section styles */
+  .sub-explore-section {
+    background-color: #08192141;
+    height: inherit;
+  }
+}
+
+/* Subscription section styles */
+.subscription {
+  background: url("../public/assets/BG Pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+
+  /* Subscription subsection styles */
+  .subscription_sub {
+    background: linear-gradient(to right, #1a1d1fee, #121619f2);
+    height: inherit;
+  }
+}
+
+/*  */
+.info-card {
+  text-align: center !important;
+}
+
+/* Sub-footer styles */
+.sub-footer {
+  padding-right: 100px !important;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 767.98px) {
+  .dropdown-menu {
+    transition: 1s;
+  }
+  .dropdown-menu {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /*  */
+  .col-span-2,
+  .desktop-view {
+    transition: 1s;
+    display: none;
+  }
+
+  /*  */
+  .info-card {
+    text-align: left !important;
+  }
+  /* Hero section styles for mobile */
+  .hero-section {
+    transition: 1s;
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background: -50% 70px url("../public/assets/Hero\ Image.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  /* Show mobile view */
+  .mobile-view {
+    display: block !important;
+  }
+
+  /* Adjust sub-footer for mobile */
+  .sub-footer {
+    padding-right: 0 !important;
+  }
+
+  /* Contributor section styles for mobile */
+
+  .contributor_section {
+    height: auto !important;
+    transition: 1s;
+
+    .grid {
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+  }
+
+  /* Card styles for mobile */
+  .card {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border-style: none;
+  }
+
+  /* Image card styles for mobile */
+  .image-card {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Sub-explore section styles for mobile */
+  .sub-explore-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding: 10%;
+    padding-bottom: 50px !important;
+    padding-top: 50px !important;
+    text-align: left !important;
+
+    .info-card{
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    /* Adjust text size for mobile */
+    .text-5xl {
+      font-size: 30px;
+    }
+  }
+
+  /* Subscription subsection styles for mobile */
+  .subscription_sub {
+    .m-5 {
+      margin: 0 !important;
+    }
+    .grid {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding: 10%;
+      padding-bottom: 50px !important;
+    }
+  }
+
+  /* Footer styles for mobile */
+  .footer {
+    .p-3 {
+      text-align: center;
+      align-items: center;
+    }
+
+    .social-media-icons {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
   }
 }
