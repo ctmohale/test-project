@@ -12,3 +12,7 @@ TEST-PROJECT | CubeZoo - React Frontend Developer Test
    ```bash
    npm install
    ```
+
+3. Install the following
+   npm install react-icons --save
+   npm install @react-icons/all-files --save
